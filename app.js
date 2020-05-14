@@ -57,11 +57,26 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
 
+var sumAB = sum(a,b).shift();
+var sumABC = sum(sumAB,c).shift();
+// '4 and 7 and 5 sum to 16.'
+var msg1 = `${a} and ${b} and ${c} sum to ${sumABC}.`
+
+var multiAB= multiply(a,b).shift();
+var multiABC= multiply(multiAB,c).shift();
+// 'The product of 4 and 7 and 5 is 140.'
+var msg2 = `The product of ${a} and ${b} and ${c} is ${multiABC}.`
+// console.log(sumABC);
+// console.log(multiABC);
+
+
+return[sumABC,multiABC,msg1,msg2];
+
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
 // 4,7,5
-// testSumAndMultiply();
+testSumAndMultiply();
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
