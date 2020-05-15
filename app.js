@@ -126,12 +126,23 @@ Test this function by hand in the console to get it working, and when you think 
 
 function multiplyArray(multArr) { //eslint-disable-line
 
+    var multi1 = multiply(multArr[0], multArr[1])[0];
+// console.log(multi1);
+
+    var multi2 = multiply(multi1, multArr[2])[0];
+// console.log(multi1);
+
+    var msg = 'The numbers 2,3,4 have a product of 24.';
+    // console.log(msg);
     
+
+    return [multi2, msg];
+
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
 // testArray
-// testMultiplyArray();
+testMultiplyArray();
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
@@ -155,6 +166,9 @@ Test this function by hand in the console to get it working, and when you think 
 var testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
 
 function multiplyAnyArray(dynamicArray) { //eslint-disable-line
+   
+  
+
 
 
 
